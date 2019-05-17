@@ -9,5 +9,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Example from "./example";
+console.log("Himanshu");
 
 ReactDOM.render(<Example />, document.getElementById("root"));
