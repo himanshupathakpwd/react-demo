@@ -1,18 +1,18 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from 'react'
 
-import Select from "react-select";
-import { colourOptions } from "./docs/data";
-import { Note } from "./docs/styled-components";
+import Select from 'react-select'
+import { colourOptions } from './docs/data'
+import { Note } from './docs/styled-components'
 
-const Checkbox = props => <input type="checkbox" {...props} />;
+const Checkbox = props => <input type="checkbox" {...props} />
 
 type State = {
   isClearable: boolean,
   isDisabled: boolean,
   isLoading: boolean,
   isRtl: boolean,
-  isSearchable: boolean
-};
+  isSearchable: boolean,
+}
 
 export default class SingleSelect extends Component<*, State> {
   state = {
@@ -20,26 +20,26 @@ export default class SingleSelect extends Component<*, State> {
     isDisabled: false,
     isLoading: false,
     isRtl: false,
-    isSearchable: true
-  };
+    isSearchable: true,
+  }
 
   toggleClearable = () =>
-    this.setState(state => ({ isClearable: !state.isClearable }));
+    this.setState(state => ({ isClearable: !state.isClearable }))
   toggleDisabled = () =>
-    this.setState(state => ({ isDisabled: !state.isDisabled }));
+    this.setState(state => ({ isDisabled: !state.isDisabled }))
   toggleLoading = () =>
-    this.setState(state => ({ isLoading: !state.isLoading }));
-  toggleRtl = () => this.setState(state => ({ isRtl: !state.isRtl }));
+    this.setState(state => ({ isLoading: !state.isLoading }))
+  toggleRtl = () => this.setState(state => ({ isRtl: !state.isRtl }))
   toggleSearchable = () =>
-    this.setState(state => ({ isSearchable: !state.isSearchable }));
+    this.setState(state => ({ isSearchable: !state.isSearchable }))
   render() {
     const {
       isClearable,
       isSearchable,
       isDisabled,
       isLoading,
-      isRtl
-    } = this.state;
+      isRtl,
+    } = this.state
     return (
       <Fragment>
         <Select
@@ -62,7 +62,7 @@ export default class SingleSelect extends Component<*, State> {
           />
           Clearable
         </Note>
-        <Note Tag="label" style={{ marginLeft: "1em" }}>
+        <Note Tag="label" style={{ marginLeft: '1em' }}>
           <Checkbox
             checked={isSearchable}
             onChange={this.toggleSearchable}
@@ -70,7 +70,7 @@ export default class SingleSelect extends Component<*, State> {
           />
           Searchable
         </Note>
-        <Note Tag="label" style={{ marginLeft: "1em" }}>
+        <Note Tag="label" style={{ marginLeft: '1em' }}>
           <Checkbox
             checked={isDisabled}
             onChange={this.toggleDisabled}
@@ -78,7 +78,7 @@ export default class SingleSelect extends Component<*, State> {
           />
           Disabled
         </Note>
-        <Note Tag="label" style={{ marginLeft: "1em" }}>
+        <Note Tag="label" style={{ marginLeft: '1em' }}>
           <Checkbox
             checked={isLoading}
             onChange={this.toggleLoading}
@@ -86,7 +86,7 @@ export default class SingleSelect extends Component<*, State> {
           />
           Loading
         </Note>
-        <Note Tag="label" style={{ marginLeft: "1em" }}>
+        <Note Tag="label" style={{ marginLeft: '1em' }}>
           <Checkbox
             type="checkbox"
             checked={isRtl}
@@ -96,6 +96,6 @@ export default class SingleSelect extends Component<*, State> {
           RTL
         </Note>
       </Fragment>
-    );
+    )
   }
 }

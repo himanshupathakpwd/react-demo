@@ -6,9 +6,9 @@
   If you experience any struggles with this sandbox, please raise an issue
   on github. :)
 */
-import React from "react";
-import ReactDOM from "react-dom";
-import Example from "./example";
-console.log("Himanshu");
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Example from './example'
+console.log('Himanshu')
 
-ReactDOM.render(<Example />, document.getElementById("root"));
+ReactDOM.render(<Example />, document.getElementById('root'))
